@@ -1,0 +1,256 @@
+ :root {
+     --bg-glass: rgba(0, 0, 0, 0.183);
+     --text-color: hsl(0, 0%, 100%);
+     --text-color-50: hsla(0, 0%, 100%, 0.55);
+     --nav-bg: #2b312eb0;
+ }
+
+ .bg-cover {
+     background-color: var(--bg-glass) !important;
+ }
+
+ [data-bs-theme=light] {
+     // --theme: 'light';
+     --bg-top-rg1: rgba(249, 86, 176, 1);
+     --bg-top-rg2: rgba(235, 125, 14, 0);
+     --bg-top-rg3: rgba(205, 249, 232, 0);
+     --bg-top-rg4: rgba(255, 252, 177, 0.865);
+     --bg-top-rg5: rgba(254, 228, 191, 1);
+     --bg-top-rg6: rgba(240, 189, 208, 1);
+     --bg-top-rg7: rgba(255, 129, 38, 0);
+     --bg-top-rg8: rgba(0, 204, 131, 1);
+
+ }
+
+ [data-bs-theme=dark] {
+     --bg-top-rg1: rgb(0, 49, 22);
+     --bg-top-rg2: rgba(20, 130, 241, 0);
+     --bg-top-rg3: rgba(50, 6, 23, 0);
+     --bg-top-rg4: rgba(62, 0, 124, 0.865);
+     --bg-top-rg5: rgba(1, 27, 64, 1);
+     --bg-top-rg6: rgba(15, 66, 47, 1);
+     --bg-top-rg7: rgba(0, 126, 217, 0);
+     --bg-top-rg8: rgb(60, 0, 21);
+ }
+
+
+ /* You can add global styles to this file, and also import other style files */
+ body {
+     // background: rgb(249, 86, 176);
+     // background: linear-gradient(135deg, rgba(249, 86, 176, 1) 0%, rgba(235, 125, 14, 1) 100%);
+
+     // background: rgb(47, 43, 117);
+     // background: linear-gradient(90deg, rgba(47, 43, 117, 1) 0%, rgba(53, 53, 103, 1) 35%, rgba(31, 92, 105, 1) 100%);
+
+     //  background: radial-gradient(110.35% 80.79% at 6% 103.92%,
+     //          var(--bg-top-rg1) 0%,
+     //          var(--bg-top-rg2) 100%),
+     //      linear-gradient(169.3deg,
+     //          var(--bg-top-rg1) 1%,
+     //          var(--bg-top-rg3) 46%),
+     //      radial-gradient(123% 73% at 107% 96%,
+     //          var(--bg-top-rg4) 20%,
+     //          var(--bg-top-rg5) 60%,
+     //          var(--bg-top-rg6) 75%,
+     //          var(--bg-top-rg7) 100%),
+     //      linear-gradient(0deg,
+     //          var(--bg-top-rg1) 0%,
+     //          var(--bg-top-rg8) 100%);
+
+     //  background: linear-gradient(341deg, #30668f, #639cb4, #5f2d7e, #4075c7);
+     @media only screen and (min-width: 400px) {
+         background-image: url('/assets/images/bg-1280x800.jpg');
+     }
+
+     @media only screen and (min-width: 2048px) {
+         background-image: url('/assets/images/bg-2048x1152.jpg');
+     }
+
+     @media only screen and (min-width: 2880px) {
+         background-image: url('/assets/images/bg-2880x1800.jpg');
+     }
+
+     @media only screen and (min-width: 1280px) {
+         background-image: url('/assets/images/bg-3840x2400.jpg');
+     }
+
+     background-size: contain;
+
+
+
+     // background-blend-mode: , , , ;
+     section.body {
+         background-color: var(--bs-black);
+         position: relative;
+         mix-blend-mode: lighten;
+     }
+
+     background-attachment: fixed;
+     overflow-y: auto;
+     overflow-x: hidden;
+     min-height: 100vh;
+     min-width: 100vw;
+ }
+
+ /* section {
+    padding: 25vh;
+
+    app-header {
+        background-color: red;
+    }
+} */
+ /* Importing Bootstrap SCSS file. */
+ @import 'bootstrap/scss/bootstrap';
+ @import 'bootstrap-icons/font/bootstrap-icons';
+
+ * {
+     color: white;
+     scroll-behavior: smooth;
+ }
+
+
+
+
+
+ body::-webkit-scrollbar,
+ body *::-webkit-scrollbar {
+     width: 4px !important;
+ }
+
+ body::-webkit-scrollbar-track,
+ body *::-webkit-scrollbar-track {
+     background-color: #00000000;
+     border-radius: 3px
+ }
+
+ body::-webkit-scrollbar-thumb,
+ body *::-webkit-scrollbar-thumb {
+     background: #5e0b08;
+     border-radius: 3px
+ }
+
+ ::-webkit-scrollbar-thumb:hover {
+     background: #400604b6;
+ }
+
+ ::-webkit-scrollbar-thumb:active {
+     background: #400604;
+ }
+
+
+
+
+
+
+ ::-webkit-scrollbar-corner {
+     background: rgba(255, 255, 255, 0)
+ }
+
+ .bi {
+     margin: 0.5rem 0.5rem;
+
+     &:hover {
+         cursor: pointer;
+     }
+ }
+
+ .svg {
+     height: 48px;
+     width: 48px;
+     margin: 0rem 10px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     transition: all 0.3s ease-in-out;
+
+     &:hover {
+         scale: 1.2;
+     }
+
+
+     &.svg-aws {
+         background-image: url('assets/svg/amazon-web-services.svg');
+     }
+
+     &.svg-spring {
+         background-image: url('assets/svg/icons8-spring-boot.svg');
+     }
+
+     &.svg-java {
+         background-image: url('assets/svg/icons8-java.svg');
+     }
+
+     &.svg-angular {
+         background-image: url('assets/svg/icons8-angularjs.svg');
+     }
+
+     &.svg-react {
+         background-image: url('assets/svg/icons8-react-native.svg');
+     }
+
+     &.svg-javascript {
+         background-image: url('assets/svg/icons8-javascript.svg');
+     }
+
+     &.svg-html {
+         background-image: url('assets/svg/icons8-html-5.svg');
+     }
+
+     &.svg-css {
+         background-image: url('assets/svg/icons8-css3.svg');
+     }
+
+     &.svg-scss {
+         background-image: url('assets/svg/icons8-sass-avatar.svg');
+     }
+
+     &.svg-typescript {
+         background-image: url('assets/svg/icons8-typescript.svg');
+     }
+
+     &.svg-tomcat {
+         background-image: url('assets/svg/icons8-tomcat.svg');
+     }
+
+     &.svg-docker {
+         background-image: url('assets/svg/icons8-docker.svg');
+     }
+
+     &.svg-git {
+         background-image: url('assets/svg/icons8-git.svg');
+     }
+
+     &.svg-postgres {
+         background-image: url('assets/svg/icons8-postgresql.svg');
+     }
+
+     &.svg-oracle {
+         background-image: url('assets/svg/icons8-oracle-logo.svg');
+     }
+
+     &.svg-mysql {
+         background-image: url('assets/svg/icons8-my-sql.svg');
+     }
+
+     &.svg-aws-code-commit {
+         background-image: url('assets/svg/logos--aws-codecommit.svg');
+     }
+
+     &.svg-github {
+         background-image: url('assets/svg/icons8-github.svg');
+     }
+
+     &.svg-linkedin {
+         background-image: url('assets/svg/icons8-linkedin.svg');
+     }
+
+     //  &.svg- {
+     //      background-image: url('assets/svg/');
+     //  }
+
+ }
+
+ .flex-center {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }

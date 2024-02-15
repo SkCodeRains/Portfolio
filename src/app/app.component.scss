@@ -1,0 +1,68 @@
+:host {
+    section {
+        overflow: hidden;
+        display: block;
+
+        section {
+            position: relative !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
+
+    }
+}
+
+:host {
+    min-height: 100vh;
+    // max-height: 100vh;
+    min-width: 100vw;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+    display: block;
+    position: relative;
+
+    .bg {
+        z-index: -1;
+    }
+
+    .bg::after,
+    .bg::before {
+        content: "";
+        height: 100vh;
+        position: absolute;
+        width: 100vw;
+        background-image: url('/assets/svg/bgBalls.svg');
+        background-size: 80% 90%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        opacity: 0.2;
+    }
+
+    .myFish {
+        background-color: red;
+    }
+
+    .bg::after {
+        animation: spin 70s linear infinite reverse;
+
+    }
+
+    .bg::before {
+        animation: spin 60s linear infinite;
+        background-size: 60% 70%;
+        transform: translate(30%, -20%) rotate(90deg);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

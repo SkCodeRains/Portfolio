@@ -1,0 +1,25 @@
+:host {
+    >section {
+        &#about {
+            min-height: max(800px, 70vh);
+            width: max(100%, max-content);
+
+            .about-container {
+                .thumbnail {
+                    width: min(60rem, 100%, 90vh);
+                    transform: perspective(85em) rotateY(40deg);
+
+                    img {
+                        box-shadow: 0px 1px 10px 1px #ffffff2e;
+                    }
+                }
+
+                .details-panel {
+                    width: max(500px, 50%);
+                    height: max(500px, 10vh);
+                    box-shadow: 0px 1px 10px 1px #ffffff2e;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "cSpell.words": ["Shaikh"],
+  "path-intellisense.mappings": {
+    "assets": "${workspaceRoot}/src/assets"
+  }
+}
