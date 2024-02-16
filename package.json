@@ -4,11 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && npm run postbuild",
-    "postbuild": "node build.js"
-
-
-    ,
+    "build": "ng build --output-hashing none ",
+    "postbuild": "node ",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Portfolio": "node dist/Portfolio/server/server.mjs"
